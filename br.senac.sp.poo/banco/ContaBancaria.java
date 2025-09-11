@@ -9,11 +9,17 @@ public class ContaBancaria {
 	public ContaBancaria() {
 	}
 
+	public ContaBancaria(String agencia, 
+			String numero, Cliente cliente) {
+		this(agencia, numero);
+		this.cliente = cliente;
+	}
 	public ContaBancaria(String numero,
 			String agencia) {
 		this.numero = numero;
 		this.agencia = agencia;
 	}
+    public ContaBancaria(double saldo, String numero, String agencia) {}
 
 	public ContaBancaria(double saldo) {
 		this.saldo = saldo;
@@ -83,4 +89,10 @@ public class ContaBancaria {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
+
+
+    public double getSaldo() {
+        return saldo;
+    }
 }
+

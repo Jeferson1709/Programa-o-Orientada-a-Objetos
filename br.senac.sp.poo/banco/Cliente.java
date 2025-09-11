@@ -13,7 +13,7 @@ public class Cliente {
 	}
 
 	public Cliente(String nome, String cpf) {
-		this(nome);
+		this.nome = nome;
 		this.cpf = cpf;
 	}
 
@@ -34,4 +34,7 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 
+    public String info(){
+        return String.format("Nome: %s\nCPF: %s\n", this.nome, this.cpf);
+    }
 }
